@@ -1,0 +1,9 @@
+﻿@using WebsiteBanHang.Models;
+@{
+    ViewBag.Title = "SanPham1";
+    Layout = "~/Views/Layout/HomeLayout.cshtml";
+}
+@{ 
+    IEnumerable<SanPham> LstSP = (IEnumerable < SanPham >)ViewBag.lstSP;
+}
+@Html.Partial("SanPhamPartial", LstSP);
