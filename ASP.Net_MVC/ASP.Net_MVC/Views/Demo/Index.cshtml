@@ -1,0 +1,27 @@
+﻿@model ASP.Net_MVC.Models.HocSinh
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+
+<body>
+    <div>
+        <form method="post" action="/Demo/Index">
+            Mã HS: <br /> <input type="text" name="txtMaHS" /><br />
+            Họ Tên: <br /> <input type="text" name="txtTenHS" /><br />
+            <input type="submit" value="submit" />
+        </form>
+
+        @if(Model!=null)
+        {
+            <h1>@Model.MaHS</h1>
+            <h1>@Model.TenHS</h1>
+        }
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Demo</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("Demo", "demo"))
+        {
+            @Html.TextBox("txtHoTen", "text", new { @id = "id1" })
+            <br /><br />
+            @Html.ActionLink("Index page", "Index", "Demo", new { @thamso = "Tham so" }, new { @id = "id" });
+            <br /><br />
+            //@Html.ListBox("list")
+            SelectList TinhThanhP = (SelectList)ViewBag.TinhThanhPho;
+            @Html.DropDownList("Tenddl", TinhThanhP);
+            <br /><br />
+            @Html.ListBox("tenddl", TinhThanhP);
+        }
+    </div>
+</body>
+</html>
